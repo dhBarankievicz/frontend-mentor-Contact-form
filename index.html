@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Contact form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <p id="s/f"></p>
+    <form action="" id="formulario" method="post">
+      <h2>Entre em contatado</h2>
+      <div class="flex">
+        <div class="w50">
+          <label for="nome">Nome<span>*</span></label>
+          <input type="text" autocomplete="off" name="nome" id="nome">
+          <p class="fail">Esse campo é obrigatorio</p>
+        </div>
+        <div class="w50">
+          <label for="sobrenome">Sobrenome<span>*</span></label>
+          <input type="text" name="sobrenome" autocomplete="off" id="snome">
+          <p class="fail">Esse campo é obrigatorio</p>
+        </div>
+      </div>
+      <label for="email">Endereço de email<span>*</span></label>
+      <input type="email" name="email" id="email">
+      <p class="fail">Por favor insira um email válido</p>
+      <label for="op">Tipo de dúvida<span>*</span></label><br>
+      <div class="flex">
+        <div class="w50b">
+          <input type="radio" name="op" id="op1"><span>Dúvida Geral</span>
+        </div>
+        <div class="w50b" style="margin-left: auto;">
+          <input type="radio" name="op" id="op2"><span>Requisitar Suporte</span>
+        </div>
+      </div>
+      <p class="fail">Por favor selecione o tipo de dúvida</p>
+      <label for="msg">Mensagem<span>*</span></label>
+      <textarea name="msg" id="msg"></textarea>
+      <p class="fail">Esse campo é obrigatorio</p>
+      <div class="flex b" style="align-items: center;">
+        <input type="checkbox" name="check" id="check">
+        <span>Eu concordo em ser contatado pela equipe<span class="dentro">*</span></span>
+      </div>
+      <p class="fail">Para enviar, por favor concorde em ser contatado</p>
+      <input type="submit" value="Enviar" id="enviar">
+    </form>
+
+
+  </main>
+
+  Message Sent!
+  Thanks for completing the form. We'll be in touch soon!
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

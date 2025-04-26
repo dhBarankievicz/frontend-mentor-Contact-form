@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+}
+.flex{
+    display: flex;
+}
+.w50{
+    width: 50%;
+}
+.w50b{
+    width: 48%;
+    height: 50px;
+    border-radius: 8px;
+    padding-top: 15px;
+    padding-left: 20px;
+}
+body{
+    background-color:hsl(148, 38%, 91%);
+}
+main{
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    margin: 120px auto;
+    border-radius: 20px;
+    padding: 30px;
+}
+label{
+    margin-bottom: 10px;
+    display: block;
+}
+label span, span.dentro{
+    color: hsl(169, 82%, 27%);
+}
+input, textarea, .w50b{
+    display: block;
+    border: 1px solid hsl(186, 15%, 59%);
+    margin-bottom: 8px;
+}
+input[type='text'],textarea, input[type='email']{
+    padding: 10px;   
+}
+.w50b input[type='radio'], input[name='check']{
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: 5px;
+    cursor: pointer; 
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height:16px;
+    border: 1px solid hsl(186, 15%, 59%);
+    border-radius: 8px;
+    position: relative;
+    
+}
+input[type="radio"]:checked::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: hsl(169, 82%, 27%);
+}
+h2{
+    margin-bottom: 30px;
+    font-size: 22px;
+}
+.w50 input, input[type='email'], textarea{
+    width: 95%;
+    height: 50px;
+    border-radius: 8px;
+}
+input[type='email'],textarea{
+    width: 100%;
+}
+input[name='sobrenome'], label[for='sobrenome']{
+    margin-left: 10px;
+}
+textarea{
+    resize: none;
+    height: 120px;
+}
+input[name='check']{
+    border-radius: 0;
+}
+
+input[name='check']:checked{
+    background-color: rgb(12, 125, 105);
+}
+input[name='check']:checked:before{
+    content: "✔";
+    font-size: 14px;
+    position: absolute;
+    top: -3px;
+    left: 1px;
+    color: white;
+    display: inline-block;
+}
+input[type='submit']{
+    width: 100%;
+    color: white;
+    background-color: hsl(169, 82%, 27%);
+    border-radius: 10px;
+    border: 0;
+    height: 50px;
+    cursor: pointer;
+    margin: 20px 0 0 0 ;
+}
+input[type='submit']:hover{
+    background-color: hsl(169, 83%, 20%);
+}
+p.fail{
+    font-size: 14px;
+    color: rgb(192, 2, 2);
+    margin-bottom: 15px;
+    visibility: hidden;
+}
+.flex.b{
+    margin-bottom: 10px;
+}
+.w50b span{
+    position: relative;
+    top: -3px;
+}
+/******/
+input[type='text']:focus, textarea:focus,input[type='email']:focus{
+    border: 0;
+   outline: 1px solid hsl(169, 82%, 27%);
+}
+.flex>span{
+    margin-left: 5px;
+}
+.success{
+    position: absolute;
+    width: 80%;
+    max-width: 320px;
+    height: 100px;
+    background-color: hsl(169, 82%, 27%);
+    transform: translateX(-50%);
+    left: 50%;
+    top: 5%;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 0px;
+    text-align: center;
+    transition: 1s;
+}
+.success img{
+    position: relative;
+    top: 5px;
+    left: -3px;
+}
+.success p{
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+@media screen and (max-width:768px) {
+    body{
+        padding: 0 2%;
+    }
+    .w50, .w50b{
+        width: 100%;
+        margin-left: 0 !important;
+    }
+    .w50 input{
+        width: 100%;
+        margin-left: 0;
+    }
+    .flex{
+        flex-direction: column;
+    }
+    .flex.b{
+        flex-direction: row;
+    }
+}
